@@ -1,0 +1,10 @@
+User guide
+===========
+This section contains basic information regarding
+the usage of this module.
+
+Dependencies
+------------
+`Matplotlib <https://matplotlib.org/>`_ 
+
+`Pandas <https://pandas.pydata.org/>`_

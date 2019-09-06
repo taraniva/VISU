@@ -1,0 +1,265 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="y">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Welcome to VISU&#39;s documentation! &#8212; VISU  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="User guide" href="general_information.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-visu-s-documentation">
+<h1>Welcome to VISU's documentation!<a class="headerlink" href="#welcome-to-visu-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p>This project is intended for visualisation of
+unstructured meshes used in Computational Fluid
+Dynamics.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="general_information.html">User guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="general_information.html#dependencies">Dependencies</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="visu_func.Cell">
+<em class="property">class </em><code class="descclassname">visu_func.</code><code class="descname">Cell</code><span class="sig-paren">(</span><em>cID</em>, <em>nvert</em>, <em>itr_nodes</em>, <em>ctr_vals</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visu_func.html#Cell"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visu_func.Cell" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="visu_func.Node">
+<em class="property">class </em><code class="descclassname">visu_func.</code><code class="descname">Node</code><span class="sig-paren">(</span><em>nID</em>, <em>nx</em>, <em>ny</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visu_func.html#Node"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visu_func.Node" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="visu_func.connect_nodes">
+<code class="descclassname">visu_func.</code><code class="descname">connect_nodes</code><span class="sig-paren">(</span><em>figure_nodes</em>, <em>first_node_ID</em>, <em>second_node_ID</em>, <em>nodes</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visu_func.html#connect_nodes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visu_func.connect_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plots a line between two selected nodes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>figure_nodes</strong> -- Matplotlib <cite>figure</cite> instance</li>
+<li><strong>first_node_ID</strong> -- <cite>integer</cite> ID of first node</li>
+<li><strong>first_node_ID</strong> -- <cite>integer</cite> ID of second node</li>
+<li><strong>nodes</strong> -- <cite>list</cite> of nodes</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="visu_func.draw">
+<code class="descclassname">visu_func.</code><code class="descname">draw</code><span class="sig-paren">(</span><em>filename_mesh</em>, <em>filename_cellsid</em>, <em>filename_connectivity</em>, <em>filename_vals</em>, <em>val_name</em>, <em>x_min</em>, <em>x_max</em>, <em>y_min</em>, <em>y_max</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visu_func.html#draw"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visu_func.draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main plotting routine. Generates nodal plot, coloured plot and mesh plot
+and saves them in <cite>.eps</cite> format.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filename_mesh</strong> -- Path to file containing nodal coordinates</li>
+<li><strong>filename_cellsid</strong> -- Path to file containing cell characteristics</li>
+<li><strong>filename_connectivity</strong> -- Path to file containing cell connectivity</li>
+<li><strong>filename_vals</strong> -- Path to file containing cell-centred variables</li>
+<li><strong>val_name</strong> -- Varible for coloured plot, either <cite>density</cite>, <cite>pressure</cite> or <cite>internal_energy</cite></li>
+<li><strong>x_min</strong> -- &quot;left&quot; x-axis boundary for plotting</li>
+<li><strong>x_max</strong> -- &quot;right&quot; x-axis boundary for plotting</li>
+<li><strong>y_min</strong> -- &quot;lower&quot; y-axis boundary for plotting</li>
+<li><strong>y_max</strong> -- &quot;upper&quot; y-axis boundary for plotting</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="visu_func.get_cvert_coords_x">
+<code class="descclassname">visu_func.</code><code class="descname">get_cvert_coords_x</code><span class="sig-paren">(</span><em>cell_ID</em>, <em>nodes</em>, <em>cells</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visu_func.html#get_cvert_coords_x"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visu_func.get_cvert_coords_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets x-coordinates of all nodes in a given cell.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>cell_ID</strong> -- <cite>integer</cite> representing cell ID</li>
+<li><strong>nodes</strong> -- List containing objects of <cite>node</cite> class</li>
+<li><strong>cells</strong> -- List containing objects of <cite>cell</cite> class</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><cite>list</cite> containing x-coordinates of nodes in cell nr. <cite>cell_ID</cite></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="visu_func.get_cvert_coords_y">
+<code class="descclassname">visu_func.</code><code class="descname">get_cvert_coords_y</code><span class="sig-paren">(</span><em>cell_ID</em>, <em>nodes</em>, <em>cells</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visu_func.html#get_cvert_coords_y"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visu_func.get_cvert_coords_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets y-coordinates of all nodes in a given cell.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>cell_ID</strong> -- <cite>integer</cite> representing cell ID</li>
+<li><strong>nodes</strong> -- List containing objects of <cite>node</cite> class</li>
+<li><strong>cells</strong> -- List containing objects of <cite>cell</cite> class</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><cite>list</cite> containing y-coordinates of nodes in cell nr. <cite>cell_ID</cite></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="visu_func.insert_cell_variables">
+<code class="descclassname">visu_func.</code><code class="descname">insert_cell_variables</code><span class="sig-paren">(</span><em>nc</em>, <em>cells</em>, <em>data_variables</em>, <em>data_cell_vertices</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visu_func.html#insert_cell_variables"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visu_func.insert_cell_variables" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transfers cell variables from imported data tables into the cells.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>nc</strong> -- <cite>integer</cite> representing the total number of cells</li>
+<li><strong>cells</strong> -- <cite>list</cite> containing all <cite>cell</cite> objects</li>
+<li><strong>data_variables</strong> -- <cite>pandas</cite> table containing all cell variables ordered by cell ID</li>
+<li><strong>data_cell_vertices</strong> -- <cite>pandas</cite> table containing list of vertices in all cells</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="visu_func.truncate_colourmap">
+<code class="descclassname">visu_func.</code><code class="descname">truncate_colourmap</code><span class="sig-paren">(</span><em>cmap</em>, <em>minval</em>, <em>maxval</em>, <em>n=100</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visu_func.html#truncate_colourmap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visu_func.truncate_colourmap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modifies the span of inserted colourmap.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>cmap</strong> -- Matplotlib <cite>colormap</cite> instance. Example colourmaps eg. 'jet', 'viridis' etc.</li>
+<li><strong>minval</strong> -- <cite>float</cite> in interval [0,1] representing lower boundary colour</li>
+<li><strong>maxval</strong> -- <cite>float</cite> in interval [0,1] representing upper boundary colour</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Colourmap with updated colour span.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Matplotlib <cite>colourmap</cite> instance.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="references">
+<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">VISU</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="general_information.html">User guide</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="general_information.html" title="next chapter">User guide</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/index.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
