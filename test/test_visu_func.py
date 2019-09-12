@@ -2,13 +2,15 @@ import visu_func
 from visu_func import Node
 from visu_func import Cell
 import pandas as pd
+import os
 
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 def test_cell_variables():
     
     # Testing on mesh 4x4 cells for Noh problem
     names_nodes = ['nx', 'ny']
-    data_nodes = pd.read_csv(r"/Users/Ivan/Documents/FJFI/BC_Arbeit/CCLuS/mesh_000.dat",
+    data_nodes = pd.read_csv("mesh_000.dat",
                        delimiter=' ',
                        skipinitialspace=True,
                        names=names_nodes)    
@@ -20,7 +22,7 @@ def test_cell_variables():
                                'IDbdry',
                                'nvert',
                                'nbdrcells']
-    data_cell_connectivity = pd.read_csv(r"/Users/Ivan/Documents/FJFI/BC_Arbeit/CCLuS/input_cellsid.dat",
+    data_cell_connectivity = pd.read_csv("input_cellsid.dat",
                                          delimiter=' ',
                                          skipinitialspace=True,
                                          names=names_cell_connectivity)
@@ -36,7 +38,7 @@ def test_cell_variables():
                            'v1', 'v2', 'v3', 'v4', 'v5', 'v6',
                            'ng1', 'ng2', 'ng3', 'ng4', 'ng5', 'ng6']
     
-    data_cell_vertices = pd.read_csv(r"/Users/Ivan/Documents/FJFI/BC_Arbeit/CCLuS/input_cnconn.dat",
+    data_cell_vertices = pd.read_csv("input_cnconn.dat",
                                      delimiter=' ',
                                      skipinitialspace=True,
                                      names=names_cell_vertices)
@@ -50,7 +52,7 @@ def test_cell_variables():
                        'cell_pressure',
                        'cell_internal_energy']
     
-    data_variables = pd.read_csv(r"/Users/Ivan/Documents/FJFI/BC_Arbeit/CCLuS/vals_000.dat",
+    data_variables = pd.read_csv("vals_000.dat",
                                  delimiter=' ',
                                  skipinitialspace=True,
                                  names=names_variables)
